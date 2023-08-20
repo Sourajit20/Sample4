@@ -21,10 +21,10 @@ def main():
     st.pyplot(fig)
 
     # Download as CSV
-if st.button("Download Data as CSV"):
-    df = pd.DataFrame(data, columns=["Value"])
-    csv = df.to_csv(index=False)
-    st.download_button("Download CSV", data=csv, file_name="generated_data.csv")
+    if st.button("Download Data as CSV"):
+        df = pd.DataFrame(data, columns=["Value"])
+        csv = df.to_csv(index=False)
+        st.download_button("Download CSV", data=csv, file_name="generated_data.csv")
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
