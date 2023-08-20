@@ -26,5 +26,5 @@ def main():
         csv = df.to_csv(index=False)
         st.download_button("Download CSV", data=csv, file_name="generated_data.csv")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
